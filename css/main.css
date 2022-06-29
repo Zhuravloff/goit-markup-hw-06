@@ -5,6 +5,7 @@
   --first-background-color: #2f303a;
   --secondary-background-color: #f5f4fa;
   --button-text-color: #ffffff;
+  --hover-color: #188ce8;
   --contacts-text-color: rgba(255, 255, 255, 0.6);
   --icon-color: #afb1b8;
   --modal-background-color: rgba(0, 0, 0, 0.2);
@@ -93,13 +94,34 @@ img {
 /* button */
 
 .button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 32px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+
   font-family: inherit;
   cursor: pointer;
   border: none;
   text-align: center;
-  font-size: 16px;
-  box-sizing: border-box;
+
+  color: var(--button-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--hover-color);
+  transition: background-color var(--transition);
 }
 
 *,
@@ -126,6 +148,14 @@ img {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+}
+
+.basement-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: var(--button-text-color);
+  text-transform: uppercase;
 }
 
 /*Main nav*/
@@ -240,21 +270,6 @@ img {
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
-}
-
-.hero .button {
-  margin-left: auto;
-  margin-right: auto;
-
-  padding: 10px 32px;
-  min-width: 200px;
-  border-radius: 4px;
-
-  color: var(--button-text-color);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  line-height: 1.8;
-  letter-spacing: 0.06em;
 }
 
 /* feature */
@@ -503,14 +518,6 @@ img {
   align-items: baseline;
 }
 
-.footer-social-title {
-  font-weight: 700;
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: var(--button-text-color);
-  text-transform: uppercase;
-}
-
 .social-footer {
   margin-left: 70px;
 }
@@ -539,16 +546,7 @@ img {
 }
 
 .basement-mail {
-  margin-left: 93px;
-  min-width: 570px;
-}
-
-.basement-mail-title {
-  font-weight: 700;
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: var(--button-text-color);
-  text-transform: uppercase;
+  margin-left: auto;
 }
 
 .basement-follow {
@@ -556,37 +554,16 @@ img {
   align-items: center;
 }
 
-.basement-mail .button {
-  position: relative;
-  margin-left: 12px;
-  margin-right: 0;
-  padding: 10px 29px;
-  min-width: 200px;
-  color: var(--button-text-color);
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-weight: 700;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
 .icon-send {
-  position: absolute;
   margin-left: 10px;
-  right: 28px;
 
   fill: var(--button-text-color);
 }
 
 .basement-input {
-  box-sizing: border-box;
   min-width: 358px;
-  width: 100%;
+  margin-right: 12px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -598,6 +575,8 @@ img {
   line-height: 1.25px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  border: none;
+
   background-color: transparent;
 }
 
@@ -624,6 +603,7 @@ img {
   letter-spacing: 0.03em;
   padding: 6px 22px;
   border-radius: 4px;
+  color: var(--main-color);
 
   background-color: var(--secondary-background-color);
   transition: color var(--transition), background-color var(--transition),
@@ -768,8 +748,6 @@ img {
 }
 
 .modal-form {
-  width: 448px;
-  margin-top: 12px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -783,7 +761,6 @@ img {
 
 .input-div {
   position: relative;
-  margin-bottom: 10px;
 }
 
 .form-input {
@@ -880,7 +857,7 @@ img {
   margin-bottom: 30px;
 }
 
-.lable {
+.label {
   display: inline-block;
 }
 
@@ -903,6 +880,8 @@ img {
 
   margin-right: 8px;
 
+  cursor: pointer;
+
   border: 2px solid var(--main-color);
   border-radius: 4px;
 }
@@ -915,13 +894,31 @@ img {
   background-origin: border-box;
 }
 
-.ckeck-link {
-  color: var(--accent-color);
+.check-icon:hover,
+.check-icon:focus {
+  border-color: var(--accent-color);
+  transition: border-color var(--transition);
 }
 
-/* .check-text {
-  display: inline-block;
-} */
+.ckeck-link {
+  color: var(--accent-color);
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+}
+
+.check-text {
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 1.7px;
+
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  color: var(--secondary-text-color);
+}
 
 .modal-form .submit-button {
   display: block;
