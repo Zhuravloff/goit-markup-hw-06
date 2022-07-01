@@ -101,6 +101,7 @@ img {
   margin-right: auto;
   margin-left: auto;
   padding: 10px 32px;
+  min-width: 200px;
   height: 50px;
   font-size: 16px;
   font-weight: 700;
@@ -602,6 +603,7 @@ img {
   line-height: 1.6;
   letter-spacing: 0.03em;
   padding: 6px 22px;
+  min-width: auto;
   border-radius: 4px;
   color: var(--main-color);
 
@@ -742,6 +744,7 @@ img {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -781,7 +784,8 @@ img {
   color: var(--main-color);
 }
 
-.modal-form label {
+.modal-form label,
+.chech-form label {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.15;
@@ -791,8 +795,14 @@ img {
   align-items: center;
 }
 
-.form-div input:hover,
-.form-div input:focus,
+.form-input:hover + .modal-icon,
+.form-input:focus + .modal-icon {
+  fill: var(--accent-color);
+  transition: fill var(--transition);
+}
+
+.form-input:hover,
+.form-input:focus,
 .form-div textarea:hover,
 .form-div textarea:focus {
   border: 1px solid var(--accent-color);
@@ -801,12 +811,6 @@ img {
   outline: none;
 
   transition: border var(--transition);
-}
-
-.input-div:hover,
-.input-div:focus {
-  fill: var(--accent-color);
-  transition: fill var(--transition);
 }
 
 .modal-form input::placeholder {
@@ -872,6 +876,9 @@ img {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .check-icon {
