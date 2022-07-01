@@ -901,10 +901,9 @@ img {
   background-origin: border-box;
 }
 
-.check-icon:hover,
-.check-icon:focus {
+.checkbox:hover + .check-icon,
+.checkbox:focus + .check-icon {
   border-color: var(--accent-color);
-  transition: border-color var(--transition);
 }
 
 .ckeck-link {
@@ -913,6 +912,8 @@ img {
   line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
+
+  transition: border-color var(--transition);
 }
 
 .check-text {
