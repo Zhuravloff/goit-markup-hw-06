@@ -927,23 +927,6 @@ img {
   color: var(--secondary-text-color);
 }
 
-.modal-form .submit-button {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 10px 55px;
-  max-width: 200px;
-  border: none;
-  text-align: center;
-  cursor: pointer;
-
-  color: var(--button-text-color);
-  background-color: var(--accent-color);
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
 /* .visually-hidden {
   position: absolute;
   white-space: nowrap;
