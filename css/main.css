@@ -773,6 +773,7 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: fill var(--transition);
 }
 
 .modal-div-title {
@@ -798,7 +799,6 @@ img {
 .form-input:hover + .modal-icon,
 .form-input:focus + .modal-icon {
   fill: var(--accent-color);
-  transition: fill var(--transition);
 }
 
 .form-input:hover,
@@ -806,7 +806,6 @@ img {
 .form-div textarea:hover,
 .form-div textarea:focus {
   border: 1px solid var(--accent-color);
-  border-radius: 4px;
   cursor: pointer;
   outline: none;
 
@@ -858,6 +857,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
