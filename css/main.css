@@ -794,6 +794,7 @@ img {
 
 .modal-form label,
 .check-form label {
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.15;
   letter-spacing: 0.01em;
